@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #fff;
+}
+
+.main-header {
+  background-color: #ff7a00;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo {
+  height: 40px;
+}
+
+
+.menu-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.restaurant {
+  position: relative;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+.restaurant-info {
+  background: white;
+  padding: 1rem;
+  text-align: center;
+  margin-top: -2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bewertung {
+  color: #ff7a00;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tab {
+  background: #f1f1f1;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #ff7a00;
+  color: white;
+}
+
+.content {
+  display: flex;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.kategorie-bild {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin: 0.5rem 0 1rem 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#menu {
+  flex: 2;
+}
+
+#Warenkorb {
+  flex: 1;
+  background: #f9f9f9;
+  border-left: 2px solid #ddd;
+  padding: 1rem;
+  min-width: 250px;
+
+    /* sticky option */
+    position: sticky;
+    top: 1rem;
+    align-self: flex-start;
+    height: fit-content;
+  }
+
+
+.qty-btn {
+  background-color: #ff7a00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin: 0 4px;
+  padding: 2px 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.qty-btn:hover {
+  background-color: #e56c00;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ff7a00;
+  margin-left: 10px;
+}
+
+.remove-btn:hover {
+  color: red;
+}
+
+.haupt-footer {
+  background-color: #ff7a00;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+
+/* responsive auf max. 700- */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  #Warenkorb {
+    border-left: none;
+    border-top: 2px solid #ddd;
+
+    margin-top: 1rem;
+  }
+
+  .restaurant-info {
+    margin-top: -1.5rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+
+  }
+
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+
+  }
+
+  .logo-title {
+    font-size: 1.2rem;
+  }
+
+  .hero-img {
+    max-height: 180px;
+  }
+}
+
+/* responsive auf max. 320 */
+@media (max-width: 320px) {
+  .tab {
+
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo {
+    height: 30px;
+  }
+}
