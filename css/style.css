@@ -294,3 +294,26 @@ body {
     height: 100vh;
   }
 }
+
+
+/* breadcrumbs aka nav */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem;
+  font-size: .9rem;
+  color: #777;
+  margin: .25rem 0 .5rem;
+}
+.breadcrumbs a {
+  color: #ff7a00;
+  text-decoration: none;
+}
+.breadcrumbs a:hover { text-decoration: underline; }
+
+.crumb-sep { color: #bbb; }
+
+/* css effekt für smoothing scrolling*/
+html { scroll-behavior: smooth; }
+#Hauptgerichte, #Nachspeisen, #Getränke { scroll-margin-top: 80px; }
