@@ -112,7 +112,42 @@ function removeItem(i) {
 renderMenu();
 updateWarenkorb();
 
-
 // weitere ideen:
 // 1, ein bestell-btn mit alter() dass die Bestellung abgesendet wurde
 // 2, weitere Seiten zb. für IMpressum usw.
+
+
+// Funktion für mobilken Warenkorb 
+const cartFab = document.getElementById('cart-toggle');
+const cartAside = document.getElementById('Warenkorb');
+const cartClose = cartAside.querySelector('.cart-close');
+
+function openCart() {
+  cartAside.classList.add('open');
+  document.body.classList.add('no-scroll');
+  cartFab.setAttribute('aria-expanded', 'true');
+}
+
+function closeCart() {
+  cartAside.classList.remove('open');
+  document.body.classList.remove('no-scroll');
+  cartFab.setAttribute('aria-expanded', 'false');
+}
+
+cartFab.addEventListener('click', () => {
+  const isOpen = cartAside.classList.contains('open');
+  isOpen ? closeCart() : openCart();
+});
+
+cartClose.addEventListener('click', closeCart);
+
+// schließen bei tip außerhalb
+
+cartAside.addEventListener('click', (e) => {
+
+  // verhindert das closeing wenn innerhalb getippt wird
+  const isInside = e.target.closest('#Warenkorb > *:not(.cart-close)');
+ 
+  if (!isInside) closeCart();
+  
+});

@@ -12,8 +12,6 @@
       <img src="assets/logos/Logo.png" alt="Logo" class="logo" />
       <span>Von Stefan</span>
     </div>
-    <!-- evtl. für weitere seitenmenüs -->
-    <div class="menu-icon">☰</div> 
   </header>
 
   <main>
@@ -46,8 +44,9 @@
       <div id="Getränke"></div>
 
       </div>
-      
+
       <aside id="Warenkorb">
+        <button class="cart-close" aria-label="Warenkorb schließen">×</button>
         <h2>Warenkorb</h2>
         <ul id="Warenkorb-items"></ul>
         <div id="summary">
@@ -58,6 +57,12 @@
       </aside>
     </section>
   </main>
+
+  <!-- Warenkorb -->
+  <button id="cart-toggle" class="cart-fab" aria-controls="Warenkorb" aria-expanded="false">
+
+    Warenkorb
+  </button>
 
   <footer class="haupt-footer">
     <p>(c) 2025 - Krosse Krabbe Pizza</p>

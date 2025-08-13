@@ -105,8 +105,6 @@ body {
   border-left: 2px solid #ddd;
   padding: 1rem;
   min-width: 250px;
-
-    /* sticky option */
     position: sticky;
     top: 1rem;
     align-self: flex-start;
@@ -201,5 +199,98 @@ body {
 
   .logo {
     height: 30px;
+  }
+}
+
+
+.cart-fab {
+  display: none;
+}
+
+.cart-close {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .cart-fab {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    border: none;
+    padding: 1rem 1.25rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    background: #3893ef;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  /* verstecke den Warenkorb da standardmäßig nicht da sein soll */
+  #Warenkorb {
+    position: fixed;
+    inset: 0; 
+    background: #fff;
+    z-index: 1100;
+    display: none; 
+    overflow: auto;
+    border: none;        
+    padding: 0 1rem 5rem; 
+  }
+
+  /* overlay offen bleiben */
+  #Warenkorb.open {
+    display: block;
+    animation: cartFade .15s ease-out;
+  }
+
+  @keyframes cartFade {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .cart-close {
+    display: inline-flex;
+    position: sticky; 
+    top: 0;
+    margin-left: auto;
+    margin-top: .75rem;
+    border: none;
+    background: transparent;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    color: #333;
+    z-index: 1;
+  }
+
+  /* Desktop anpasssungen für mobil */
+  .content {
+    flex-direction: column;
+  }
+
+  #Warenkorb h2 {
+    margin-top: 0.25rem;
+    background: #1e90ff;
+    color: #fff;
+    padding: .75rem 1rem;
+    border-radius: 8px;
+  }
+
+  #Warenkorb {
+    min-width: auto;
+    align-self: auto;
+    height: auto;
+    border-left: none;
+    background: #fff;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
   }
 }
